@@ -11,13 +11,13 @@ for item in lst:
         continue
 print(s)
 #20
-tol  = 1e-06
+tol  = 10**(-6)
 x=float(input())
 v=1
 c=0
 i=1
 while v>tol:
-    v=((-1)**(i-1)*x**i)/i
+    v=abs(((-1)**(i-1)*x**i)/i)
     c+=((-1)**(i-1)*x**i)/i
     i+=1
 print(round(c,ndigits=8))
